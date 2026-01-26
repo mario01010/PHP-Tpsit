@@ -1,0 +1,7 @@
+{
+    "tipo": [
+        {"id" : 1, "tipologia": "Rosso"},
+        {"id" : 2, "tipologia": "Bianco"},
+        {"id" : 3, "tipologia": "Rosato"}
+    ]
+}
