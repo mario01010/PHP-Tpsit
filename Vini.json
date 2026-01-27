@@ -92,5 +92,11 @@
         "cognome": "c",
         "quantita": "1270",
         "tipo": "3"
+    },
+    {
+        "nome": "red",
+        "cognome": "1",
+        "quantita": "1345",
+        "tipo": "1"
     }
 ]

@@ -1,7 +1,5 @@
-/* Palette Raffinata: Deep Navy & Slate */
 :root {
     --primary: #2563eb;
-    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     --text-dark: #1e293b;
     --border-color: #cbd5e1;
 }
@@ -12,29 +10,44 @@
     box-sizing: border-box;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-gradient);
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
 }
 
-/* Card Formale */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px) brightness(0.5); 
+    z-index: -1; 
+    transform: scale(1.1); 
+}
+
 form {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.98); 
     padding: 2.5rem;
     border-radius: 12px;
     width: 100%;
     max-width: 450px;
     box-shadow: 
-        0 10px 25px -5px rgba(0, 0, 0, 0.05),
-        0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        0 20px 25px -5px rgba(0, 0, 0, 0.2),
+        0 10px 10px -5px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Titolo implicito o spaziatura */
 form::before {
     content: "Dettagli Ordine";
     display: block;
@@ -46,7 +59,6 @@ form::before {
     padding-bottom: 0.5rem;
 }
 
-/* Layout Campi */
 form div {
     margin-bottom: 1.2rem;
     display: flex;
@@ -59,7 +71,6 @@ form div {
     letter-spacing: 0.025em;
 }
 
-/* Input e Select */
 input, select {
     background: #f8fafc;
     border: 1.5px solid var(--border-color);
@@ -77,7 +88,6 @@ input:focus, select:focus {
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
-/* Bottone Professional */
 button {
     width: 100%;
     margin-top: 1rem;
@@ -100,7 +110,6 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Effetto Hover sulla card */
 form:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.3);
 }
