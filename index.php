@@ -8,17 +8,18 @@ $tipi = json_decode($tipi_json);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Ordine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="app.php" method="get">
         <div class="nome">
-            Nome <input type="text" name="nome">
+            Nome <input type="text" name="nome" required>
         </div>
         <div class="cognome">
-            Cognome <input type="text" name="cognome">
+            Cognome <input type="text" name="cognome" required>
         </div>
         <div class="q">
-            Quantità <input type="number" name="q" min="0">
+            Quantità <input type="number" name="q" min="0" required>
         </div>
         <div class="Tipo">
             Tipo 

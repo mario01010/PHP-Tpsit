@@ -1,0 +1,127 @@
+
+:root {
+    --bg-color: #e2e8f0;
+    --paper-color: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent: #0f172a;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.receipt {
+    background: var(--paper-color);
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.receipt::before, .receipt::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-size: 20px 20px;
+}
+
+.receipt::before {
+    top: -10px;
+    background-image: radial-gradient(circle at 10px -10px, transparent 12px, white 13px);
+}
+
+.receipt::after {
+    bottom: -10px;
+    background-image: radial-gradient(circle at 10px 20px, transparent 12px, white 13px);
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 2px dashed #cbd5e1;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.receipt-header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.receipt-header p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 5px 0 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.value {
+    font-weight: bold;
+    text-align: right;
+}
+
+.divider {
+    border-top: 1px solid #e2e8f0;
+    margin: 20px 0;
+}
+
+.total-box {
+    background: #f8fafc;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.total-label {
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.total-amount {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.footer-msg {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.btn-back {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-back:hover { text-decoration: underline; }
