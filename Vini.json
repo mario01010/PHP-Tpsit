@@ -98,5 +98,11 @@
         "cognome": "1",
         "quantita": "1345",
         "tipo": "1"
+    },
+    {
+        "nome": "esci",
+        "cognome": "nicola",
+        "quantita": "105",
+        "tipo": "2"
     }
 ]

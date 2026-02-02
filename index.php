@@ -32,7 +32,10 @@ $tipi = json_decode($tipi_json);
             </select>
         </div>
         <br>
-        <button type="submit">Invia Dati</button>
+        <div class="button-group">
+            <button type="submit">Invia</button>
+            <button type="reset">Cancella</button>
+        </div>
     </form>
 </body>
 </html>
